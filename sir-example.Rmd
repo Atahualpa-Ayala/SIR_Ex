@@ -19,7 +19,7 @@ library(deSolve)
 init <- c(S = 1-1e-6, I = 1e-6, R = 0.0)
 
 ## beta: infection parameter; gamma: recovery parameter
-parameters <- c(beta = 2.316, gamma = 0.261)
+parameters <- c(beta = 2.516, gamma = 0.291)
 
 ## Time frame
 times      <- seq(0, 100, by = 0.5)
@@ -64,5 +64,10 @@ approx_long <- approx_df %>%
 ggplot(data = approx_long, aes(x = time, y = proportion)) +
   geom_line(aes(color = population))
 ```
+
+## Explore the code and output graph. What is the code doing? What is the graph telling us?
+
+the graph express how it the dynamic of an infectious disease a long the time, in the begging of the infectious the number of susceptibles population is the highest, the more the infection increases , more the recovered increases, but more the recovereds increases more the  infection decreases 
+
 
 ## End
